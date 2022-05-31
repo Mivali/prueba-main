@@ -11,21 +11,30 @@ const style = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      backgroundColor: '#ff8800',
+      backgroundColor: '#0096C7',
       height: 45,
       width: 340,
       marginLeft: 10,
       borderRadius: 10,
+      elevation: 5,
+  },
+
+  container_item:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    maxWidth: '80%',
+    textAlign: 'center'
   },
 
   text:{
       fontSize: 18,
-      fontWeight: '400',
-      color: '#737373',
+      fontWeight: '600',
+      color: '#CAF0F8',
   },
 
   trashIcon:{
-      fontSize: 12,
+      fontWeight: '600',
+      
   },
 
   /*ESTILOS PARA CHECKBOX */
@@ -71,24 +80,37 @@ const style = StyleSheet.create({
 
   /* ESTILOS PARA HOMESCREEN */
 
+  image: {
+    width: 78,
+    height: 62,
+    alignSelf: 'flex-end'
+  },
+
   container_home:{
       flex: 1,
       paddingTop: 30, 
       paddingHorizontal: 15, 
-      backgroundColor: '#c0fdff'
+      backgroundColor: '#0077b6'
   },
 
   titulo_home:{
       fontSize: 25,
       fontWeight: 'bold',
-      marginTop: 50,
+      marginTop: 40,
       marginBottom: 20,
+      color: '#CAF0F8',
+  },
+
+  task: {
+      position: 'absolute',
+      top: 180,
+      left: 20,
   },
 
   button:{
       width: 50,
       height: 50,
-      backgroundColor: 'rgba(252, 163, 17, 1)',
+      backgroundColor: 'rgba(0, 150, 199, 0)',
       borderRadius: 30,
       position: 'absolute',
       bottom: 45,
@@ -109,14 +131,20 @@ const style = StyleSheet.create({
 
   /*ESTILOS PARA ADDTODO */
 
+  container_add:{
+    flex: 1, 
+    backgroundColor: '#0077b6'
+  },
+
   title_addTodo: {
       fontSize: 25,
       fontWeight: 'bold',
       position:'absolute',
-      bottom: -220,
+      bottom: -120,
       right: 90,
-      marginTop: 30,
+      marginTop: 10,
       marginBottom: 20,
+      color: '#CAF0F8'
   },
 
   textinput: {
@@ -125,15 +153,16 @@ const style = StyleSheet.create({
       borderLeftWidth: 0,
       borderRightWidth: 0,
       position:'absolute',
-      bottom: -270,
+      bottom: -190,
       height: 40,
       width: '80%',
-      borderColor: '#6c757d',
-      backgroundColor: 'rgba(252, 163, 17, 0)',
+      borderColor: '#CAF0F8',
+      backgroundColor: 'rgba(0, 150, 199, 0.6)',
       fontSize: 18,
       marginTop: 90,
       marginLeft: 37,
       color: '#343a40',
+      textAlignVertical: 'top',
   }, 
 
   button_add: {
@@ -142,7 +171,7 @@ const style = StyleSheet.create({
       backgroundColor: 'rgba(252, 163, 17, 1)',
       borderRadius: 10,
       position: 'absolute',
-      bottom: -450,
+      bottom: -300,
       right: 110,
       elevation: 5,
   },
@@ -150,7 +179,7 @@ const style = StyleSheet.create({
   add_text_button: {
       fontSize: 30,
       textAlign: 'center',
-      color: '#fff',
+      color: '#CAF0F8',
   },
 
   text_name: {
@@ -158,17 +187,31 @@ const style = StyleSheet.create({
       textAlign: 'center',
       color: '#adb5bd',
       position: 'absolute',
-      top: 680,
-      right: 150,
+      top: 540,
+      right: 160,
+  },
+
+  image_add:{
+    position:'absolute',
+    height: 70,
+    width: 70,
+    top: 460,
+    right: 175,
+
   },
 
   /*ESTILOS PARA ABOUTSCREEN  */
+
+  container_about:{
+    backgroundColor: '#0077b6',
+    height: '100%',
+  },
 
   aboutTitle: {
       fontSize: 30,
       textAlign: 'center',
       marginTop: 40,
-      color: '#14213d',
+      color: '#CAF0F8',
   },
 
   aboutText: {
@@ -176,22 +219,17 @@ const style = StyleSheet.create({
       fontSize: 18,
       marginLeft: 16,
       marginRight: 16,
-      textAlign: 'justify'
+      textAlign: 'justify',
+      color: '#CAF0F8',
   },
 
-  githubButton: {
-      marginTop: 110,
-      marginLeft: 130,
+  linkedinButton: {
+      marginTop: 40,
+      marginLeft: 190,
       width: 180,
-      height: 30,
+      height: 50,
       borderRadius: 8,
-      backgroundColor: 'rgba(252, 163, 17, 0.6)',
-  },
-
-  githubButtonText: {
-      fontSize: 18,
-      textAlign: 'center',
-      fontWeight: 'bold'
+      
   },
   
 });

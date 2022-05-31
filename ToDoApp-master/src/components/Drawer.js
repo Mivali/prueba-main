@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from '@react-navigation/native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../screen/Home';
 import AboutScreen from '../screen/AboutMe';
@@ -16,14 +17,16 @@ export default function Drawer(){
             screenOptions={{
 
                 drawerType:"back",
+                
+                
 
                 drawerContentStyle:{
-                    backgroundColor: '#dee2e6'
+                    backgroundColor: '#64affa'
                     
                 },
-                //drawerActiveBackgroundColor: '#dee2e6',
+                
                 drawerActiveTintColor: '#495057',
-                drawerInactiveBackgroundColor: '#dee2e6',
+                drawerInactiveBackgroundColor: '#64affa',
                 drawerInactiveTintColor: '#6c757d',
                 
             }}
@@ -33,11 +36,12 @@ export default function Drawer(){
                 drawerItemStyle:{
                     marginTop: 180,
                 },
+                headerShown: true,
 
                 drawerLabel: 'Tareas',
                 drawerIcon: ({focused, size}) => (
                     <Ionicons
-                        name='person'
+                        name='ios-reader-outline'
                         size={size}
                         color={focused ? '#c71f37' : '#6c757d'}
                      />
@@ -47,26 +51,28 @@ export default function Drawer(){
             <DrawerNavigator.Screen name = 'Tarea nueva' component = {AddTodo} options={{
                 
                 drawerItemStyle:{
-                    marginTop: 180,
+                    marginTop: 10,
                 },
-
+                headerShown: true,
                 drawerLabel: 'Añadir una tarea',
                 drawerIcon: ({focused, size}) => (
-                    <Ionicons
-                        name='person'
+                    <MaterialCommunityIcons
+                        name='fountain-pen-tip'
                         size={size}
                         color={focused ? '#c71f37' : '#6c757d'}
                      />
-                )
+                ),
+                
             }}
             />
             <DrawerNavigator.Screen name = 'Sobre mí' component = {AboutScreen} options={{
                  drawerItemStyle:{
-                    marginTop: 350,
+                    marginTop: 300,
                     marginLeft: 90,
                     width: 110
                 },
-                drawerLabel: 'Sobre mí'
+                drawerLabel: 'Sobre mí',
+                
             }}
             />
         </DrawerNavigator.Navigator>

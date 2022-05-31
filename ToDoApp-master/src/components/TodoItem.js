@@ -24,12 +24,12 @@ export default function ToDoItem({id, text, isCompleted}){
 
     return(
         <View style={style.container}>
-          <View style={{flexDirection:'row'}}>
+          <View style={style.container_item}>
             <Checkbox id={id} text={text} isCompleted={isCompleted} />
-            <Text style={ isCompleted ? [style.text, {textDecorationLine: 'line-through', color: '#73737340'}] : style.text}>{text}</Text>
+            <Text style={ isCompleted ? [style.text, {textDecorationLine: 'line-through', color: '#73737370'}] : style.text}>{text}</Text>
           </View>
             <TouchableOpacity onPress={handleDeleteTodo}>  
-              <AntDesign name='delete' size={16} color='#737373' /> 
+              <AntDesign name='delete' size={22} color='#CAF0F8' style={style.trashIcon}/> 
             </TouchableOpacity>
         </View>        
     );
