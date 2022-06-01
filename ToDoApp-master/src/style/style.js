@@ -88,7 +88,7 @@ const style = StyleSheet.create({
 
   container_home:{
       flex: 1,
-      paddingTop: 30, 
+      paddingTop: 20, 
       paddingHorizontal: 15, 
       backgroundColor: '#0077b6'
   },

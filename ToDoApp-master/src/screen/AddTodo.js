@@ -14,16 +14,16 @@ export default function AddTodo() {
 
   const addTodo = async () => {
     const newTask = {
-      id: Math.floor(Math.random() * 10000), //random para generar id
+      id: Math.floor(Math.random() * 10000),            //random para generar id
       text: name,
-      isCompleted: false, //ponemos false porque no se ha completado la tarea todavia
+      isCompleted: false,                               //ponemos false porque no se ha completado la tarea todavia
     };
     try {
       await AsyncStorage.setItem(
         'Tareas',
         JSON.stringify([...listTodos, newTask]),
-      ); //guardamos lo que estaba en el estado de redux MAS el nuevo to do. Lo convertimos a JSON
-      dispatch(addTodoReducer(newTask)); //le hacemos saber a redux que le mandamos esta info
+      );                                                //guardamos lo que estaba en el estado de redux MAS el nuevo to do. Lo convertimos a JSON
+      dispatch(addTodoReducer(newTask));                //le hacemos saber a redux que le mandamos esta info
       navigation.goBack();
     } catch (e) {
       console.log('Ha surgido un error', e);
